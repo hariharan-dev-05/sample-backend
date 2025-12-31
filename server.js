@@ -9,10 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 // Import routes
 const userRoutes = require('./routes/users');
 const productRoutes = require('./routes/products');
+const updateRoutes = require('./routes/update');
 
 // Use routes
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/updates', updateRoutes);
 
 // Home route
 app.get('/', (req, res) => {
